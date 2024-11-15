@@ -105,11 +105,12 @@ header nav{
 
 .contenido{
     position: absolute;
-    margin-top: 80px;
+    margin-top: 25px;
+    padding: 0px 60px 0px 80px;
 }
 
 .imagenes{
-    columns: 5 240px;
+    columns: 7 240px;
     margin: auto;
 }
 
@@ -134,13 +135,48 @@ header nav{
     display: inline;
 }
 
+.button{
+    position: absolute;
+    left: 55%;
+    top: 5%;
+    padding: 13px 13px;
+    background-color: #e60023;
+    border-radius: 50px;
+    border: none;
+    visibility: hidden;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 .oculto1{
     position: absolute;
-    left: 60px;
+    left: 59%;
     bottom: 20px;
     background-color: white;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 50px;
     color: black;
-    
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
+}
+
+.oculto2{
+    position: absolute;
+    left: 73%;
+    bottom: 20px;
+    background-color: white;
+    font-size: 25px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
 }
