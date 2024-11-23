@@ -19,6 +19,8 @@ header nav{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 1;
 }
 
 #pinterest-icon{
@@ -103,15 +105,23 @@ header nav{
     cursor: pointer;
 }
 
+/*menu movil*/
+header .menu-movil{
+    display: none;
+}
+
 .contenido{
     position: absolute;
     margin-top: 25px;
-    padding: 0px 60px 0px 80px;
+    width: 100%;
+    /*padding: 0px 60px 0px 80px;*/
 }
 
 .imagenes{
-    columns: 7 240px;
+    columns: 5 240px;
     margin: auto;
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
 .card-image{
@@ -179,4 +189,73 @@ header nav{
     padding: 4px;
     visibility: hidden;
     display: none;
+}
+
+@media (max-width: 1200px) {
+
+ /*Medida de contenedor de imagenes y tarjetas*/ 
+    .imagenes{
+        columns: 3 200px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    
+    .card-image img{
+        border-radius: 15px;
+        min-width: 180px;
+        max-width: 200px;
+    }  
+    }
+
+
+@media (max-width: 450px) {
+
+    header .menu{
+        display: none;
+    }
+    .contenido {
+        margin-top: 10px;
+    }
+
+    header .menu-movil{
+        display: inline;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background-color: black;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+    }
+    .menu-movil li{
+        width: 60px;
+        list-style: none;
+        color: #c0bbbb;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+     .menu-movil li:first-child{
+        color: white;
+
+    }
+
+    .menu-movil li span{
+       font-size: 35px;
+
+    }
+/*Medida de contendor de imagenes y tarjetas*/ 
+    .imagenes{
+        columns: 2 180px;
+    }
+
+    .card-image img{
+        min-width: 100px;
+        max-width: 180px;
+    }
 }
